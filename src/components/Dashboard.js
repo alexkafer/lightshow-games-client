@@ -10,8 +10,9 @@ import { getGame } from "../redux/selectors"
 
 import { Container, Button } from 'react-bootstrap'
 
-import wandIcon from '../magic-wand.svg'
-import noneIcon from '../logo.svg'
+// import wandIcon from '../../public/icons/wand'
+// import pongIcon from '../../public/icons/pong'
+// import noneIcon from '../../public/icons/logo'
 
 class Dashboard extends Component {
 
@@ -19,11 +20,11 @@ class Dashboard extends Component {
         super();
 
         // This binding is necessary to make `this` work in the callback
-        this.startGame = this.startGame.bind(this);
+        this.joinGame = this.joinGame.bind(this);
         this.cancelGame = this.cancelGame.bind(this);
     }
 
-    startGame() {
+    joinGame() {
         console.log("Joining game");
         this.context.emit("join");
     }
@@ -38,7 +39,6 @@ class Dashboard extends Component {
 
         if (!this.context.connected) {
             button = (<Button 
-                onClick={this.startGame} 
                 variant="secondary" 
                 size="lg" 
                 disabled
@@ -47,7 +47,7 @@ class Dashboard extends Component {
         } else {
             if (this.props.placeInLine === -1) {
                 button = (<Button 
-                        onClick={this.startGame} 
+                        onClick={this.joinGame} 
                         variant="primary" 
                         size="lg" 
                         block>Join</Button>
@@ -75,14 +75,23 @@ class Dashboard extends Component {
             instructions =  "There are " + (this.props.placeInLine-1) + " people ahead of you.";
         }
 
+        if (!this.props.currentGame) {
+            if (this.context.connected) {
+                instructions =  "The light show is not currently playing a game. Please check back later! ";
+            } else {
+                instructions =  "The light show is currently disconnected. Please refresh and try again. ";
+            }
+           
+        }
+
         return (<>
             <div className="large-header">
                 <ConnectionStatus />
-                <ViewGame logo={this.props.currentGame === "Wand" ? wandIcon : noneIcon} />
+                <ViewGame game={this.props.currentGame} />
             </div>
             <div className="dashboard-body">
                 <Container>
-                    <h1>{this.props.currentGame}</h1>
+                    <h1>{this.props.currentGame || (this.context.connected ? "None" : "No connection")}</h1>
                     <div className="queue p-5">
                         <p>
                             {instructions}

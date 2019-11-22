@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from "react-redux";
 import { getGame } from "./redux/selectors";
-import { updateQueue, loadGame } from "./redux/actions";
+import { updateQueue, loadGame, startGame } from "./redux/actions";
 
 import Dashboard from './components/Dashboard';
-import Wand from './games/Wand';
+import Loadable from 'react-loadable';
+import ApprovalButton from './components/ApprovalButton';
 
 import SocketContext from './services/socket-context';
 import openSocket from 'socket.io-client';
@@ -14,14 +15,8 @@ import './App.scss'
 const socket = openSocket('http://localhost:2567');
 
 class App extends React.Component {
-  constructor({inGame, currentGame, loadGame, updateQueue}) {
+  constructor({loadGame, updateQueue, startGame}) {
     super();
-
-    this.state = {
-      inGame,
-      currentGame,
-      action: <div>Error. Nothing loaded.</div>
-    }
 
     socket.on('game', (game) => {
       console.log("Game:", game);
@@ -32,34 +27,39 @@ class App extends React.Component {
       console.log("Queue:", place);
       updateQueue(place)
     });
+
+    socket.on('started', () => {
+      console.log("Starting game!");
+      startGame()
+    });
   }
 
-  componentDidMount() {
-    if (!this.state.inGame) {
-      this.setState({
-        action: <Dashboard />
-      });
+  Loading (props) {
+    if (props.error) {
+      return <ApprovalButton title="Error!" description={"Unable to load " + this.props.currentGame + ". "} button="Retry" callback="props.retry"/>;
+      } else if (props.pastDelay) {
+      return <ApprovalButton title="Loading" description={"Loading" + this.props.currentGame + ". Please wait."}/>;
     } else {
-      var game;
-      switch(this.state.currentGame) {
-        case "Wand": 
-          game = <Wand />
-          break;
-        default:
-          game = <p>An error occurred. Please refresh and try again.</p>
-      }
-
-      this.setState({
-        action: game
-      });
+      return null;
     }
   }
 
   render() {
+    var CurrentAction;
+
+    if (this.props.inGame) {
+      CurrentAction = Loadable({
+        loader: () => import('./games/' + this.props.currentGame),
+        loading: this.Loading
+      });
+    } else {
+      CurrentAction = Dashboard;
+    } 
+  
     return (
       <SocketContext.Provider value={socket}>
         <main role='main'>
-          {this.state.action}
+          <CurrentAction />
         </main>
       </SocketContext.Provider>
     );
@@ -76,6 +76,7 @@ const mapDispatchToProps = dispatch => {
     // dispatching plain actions
     loadGame: (game) => dispatch(loadGame(game)),
     updateQueue: (place) => dispatch(updateQueue(place)),
+    startGame: () => dispatch(startGame()),
   }
 }
 
