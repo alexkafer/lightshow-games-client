@@ -9,14 +9,14 @@
     "static/js/3.ce5575cd.chunk.js": "/lightshow-games-client/static/js/3.ce5575cd.chunk.js",
     "static/js/3.ce5575cd.chunk.js.map": "/lightshow-games-client/static/js/3.ce5575cd.chunk.js.map",
     "main.css": "/lightshow-games-client/static/css/main.9f8db0d2.chunk.css",
-    "main.js": "/lightshow-games-client/static/js/main.d1ceaf8e.chunk.js",
-    "main.js.map": "/lightshow-games-client/static/js/main.d1ceaf8e.chunk.js.map",
+    "main.js": "/lightshow-games-client/static/js/main.bdd509ea.chunk.js",
+    "main.js.map": "/lightshow-games-client/static/js/main.bdd509ea.chunk.js.map",
     "runtime-main.js": "/lightshow-games-client/static/js/runtime-main.e1db81d4.js",
     "runtime-main.js.map": "/lightshow-games-client/static/js/runtime-main.e1db81d4.js.map",
     "static/js/6.f233391c.chunk.js": "/lightshow-games-client/static/js/6.f233391c.chunk.js",
     "static/js/6.f233391c.chunk.js.map": "/lightshow-games-client/static/js/6.f233391c.chunk.js.map",
     "index.html": "/lightshow-games-client/index.html",
-    "precache-manifest.d1fbdfd5bfeddb0b7ed3175e175fed50.js": "/lightshow-games-client/precache-manifest.d1fbdfd5bfeddb0b7ed3175e175fed50.js",
+    "precache-manifest.796826aa1863e776ee417650c350e43a.js": "/lightshow-games-client/precache-manifest.796826aa1863e776ee417650c350e43a.js",
     "service-worker.js": "/lightshow-games-client/service-worker.js",
     "static/css/main.9f8db0d2.chunk.css.map": "/lightshow-games-client/static/css/main.9f8db0d2.chunk.css.map"
   },
@@ -24,6 +24,6 @@
     "static/js/runtime-main.e1db81d4.js",
     "static/js/6.f233391c.chunk.js",
     "static/css/main.9f8db0d2.chunk.css",
-    "static/js/main.d1ceaf8e.chunk.js"
+    "static/js/main.bdd509ea.chunk.js"
   ]
 }

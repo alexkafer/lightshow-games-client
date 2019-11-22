@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afb6602233745c9bca9d2e6d7e254a68",
+    "revision": "6f878b6d1050a45b8cbabe3e7b3f6fb8",
     "url": "/lightshow-games-client/index.html"
   },
   {
-    "revision": "0f72bdae74f055b7fc34",
+    "revision": "671780cd7886c97bebd9",
     "url": "/lightshow-games-client/static/css/main.9f8db0d2.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lightshow-games-client/static/js/6.f233391c.chunk.js"
   },
   {
-    "revision": "0f72bdae74f055b7fc34",
-    "url": "/lightshow-games-client/static/js/main.d1ceaf8e.chunk.js"
+    "revision": "671780cd7886c97bebd9",
+    "url": "/lightshow-games-client/static/js/main.bdd509ea.chunk.js"
   },
   {
     "revision": "1c578a692a6edc9260a0",
