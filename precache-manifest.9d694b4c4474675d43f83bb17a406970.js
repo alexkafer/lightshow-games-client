@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d84554fce60be4462da1cf745983816",
+    "revision": "2f1488cfb95e967e5964985d2cef547a",
     "url": "/lightshow-games-client/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lightshow-games-client/static/js/1.01142ec9.chunk.js"
   },
   {
-    "revision": "f6e5bc061c3d99ee1bca",
-    "url": "/lightshow-games-client/static/js/2.3b765873.chunk.js"
+    "revision": "f9b6e4e4dee8ae82c93e",
+    "url": "/lightshow-games-client/static/js/2.5eb0786c.chunk.js"
   },
   {
     "revision": "ef055a3675056113bde8",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lightshow-games-client/static/js/main.5c7edcd1.chunk.js"
   },
   {
-    "revision": "fca01e80cb98d7bfa0b7",
-    "url": "/lightshow-games-client/static/js/runtime-main.514877d9.js"
+    "revision": "1c578a692a6edc9260a0",
+    "url": "/lightshow-games-client/static/js/runtime-main.e1db81d4.js"
   }
 ]);

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lightshow-games-client/precache-manifest.6550f3f37f5d4bc27207785db57866cb.js"
+  "/lightshow-games-client/precache-manifest.9d694b4c4474675d43f83bb17a406970.js"
 );
 
 self.addEventListener('message', (event) => {
