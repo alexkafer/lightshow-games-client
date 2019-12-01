@@ -68,7 +68,7 @@ class LocationPage extends Component {
          <h1>Set your location</h1>
           <div onTouchStart={this.handleTouchStart} className="location-pin">
 
-          <img ref={this.map} alt="Light Show Map" src="https://10.0.0.7:2568/layout/map"  />
+          <img ref={this.map} alt="Light Show Map" src="https://lightshow-games.azurewebsites.net/layout/map"  />
 
             <Draggable 
               position={pos}
