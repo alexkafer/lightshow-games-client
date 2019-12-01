@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import gyro from "./gyro";
+import position from "./position";
 import game from "./game";
 
-export default combineReducers({gyro, game});
+export default combineReducers({position, game});

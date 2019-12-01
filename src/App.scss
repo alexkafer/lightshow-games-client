@@ -1,5 +1,15 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
 .disable-dbl-tap-zoom {
   touch-action: manipulation;
 }
@@ -15,42 +25,43 @@ main {
 
 .carousel {
   height: 100%;
+
+  .carousel-page {
+    float: left; 
+    position: relative;
+    max-height: 100vh;
+    height: 100%;
+  } 
 }
 
-.page {
-  float: left; 
-  position: relative;
-  max-height: 100vh;
-  height: 100%;
-
-  position: relative;
-} 
-
-.header-connection {
+.connection-floating {
+  padding: 5px 15px;
   float: left; 
   position: absolute;
   top: 0;
   right: 0;
-  margin: 20px;
   background:#333333aa;
-  color: #fff;
-  padding: 5px 15px;
   border-radius: 5px;
+  margin: 20px;
 }
 
-.dot {
-  height: 25px;
-  width: 25px;
+.connection-indicator {
+  color: #fff;
+
+  .dot {
+    height: 25px;
+    width: 25px;
+    
+    border-radius: 50%;
+    display: inline-block;
   
-  border-radius: 50%;
-  display: inline-block;
-
-  &.red {
-    background-color: #e50000;
-  }
-
-  &.green {
-    background-color: #4BCC17;
+    &.red {
+      background-color: #e50000;
+    }
+  
+    &.green {
+      background-color: #4BCC17;
+    }
   }
 }
 
@@ -84,8 +95,23 @@ main {
 .center-item {
   text-align: center;
   margin: 0;
-  position: absolute;
-  top: 25%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  // position: absolute;
+  // top: 25%;
+  // -ms-transform: translateY(-50%);
+  // transform: translateY(-50%);
+}
+
+
+.location-pin {
+  position: relative;
+  -webkit-touch-callout: none;
+
+  .pin {
+    position: absolute;
+    transform: translateY(-100%);
+  }
+
+  img {
+    width: 100vw;
+  }
 }

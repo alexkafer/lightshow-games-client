@@ -1,13 +1,7 @@
 
-export const getOrientation = store => ({ 
-        alpha: store.gyro.alpha, 
-        beta: store.gyro.beta, 
-        gamma: store.gyro.gamma,
-        compass: store.gyro.compass,
-        compass_accuracy: store.gyro.compass_accuracy,
-        x: store.gyro.x, 
-        y: store.gyro.y, 
-        z: store.gyro.z 
+export const getPosition = store => ({ 
+        x: store.position.x, 
+        y: store.position.y
 });
 
 export const getGame = store => ({

@@ -2,7 +2,7 @@
 import React, {Component} from 'react'
 
 import SocketContext from '../services/socket-context'
-import ConnectionStatus from './ConnectionStatus'
+import ConnectionFloating from './ConnectionFloating'
 import ViewGame from './ViewGame'
 
 import { connect } from "react-redux"
@@ -86,7 +86,7 @@ class Dashboard extends Component {
 
         return (<>
             <div className="large-header">
-                <ConnectionStatus />
+                <ConnectionFloating/>
                 <ViewGame game={this.props.currentGame} />
             </div>
             <div className="dashboard-body">

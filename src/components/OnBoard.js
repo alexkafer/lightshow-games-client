@@ -2,9 +2,11 @@ import React from 'react'
 
 import ReactSwipe from 'react-swipe'
 
-import LocationPage from '../onboarding/LocationPage'
-import MotionPage from '../onboarding/MotionPage'
-import CalibratePage from '../onboarding/CalibratePage'
+import {Container, Button} from 'react-bootstrap'
+
+import LocationPage from '../settings/LocationPage'
+import MotionPage from '../settings/MotionPage'
+import CalibratePage from '../settings/CalibratePage'
 
 const OnBoard = ({reactSwipeEl}) => {
   return (
@@ -20,9 +22,18 @@ const OnBoard = ({reactSwipeEl}) => {
         }}
         >
 
-        <MotionPage/>
-        <LocationPage/>
-        <CalibratePage />
+        <div className="carousel-page">
+          <MotionPage/>
+        </div>
+
+        <div className="carousel-page">
+          <LocationPage/>
+        </div>
+        
+        <div className="carousel-page">
+          <CalibratePage />
+        </div>
+       
     
       </ReactSwipe>
       <footer className='footer mt-auto py-3 bg-dark text-white'>

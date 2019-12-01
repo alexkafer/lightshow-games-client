@@ -11,11 +11,10 @@ class ConnectionStatus extends Component {
   }
 
   componentDidMount() {
-    console.log(this.context)
     this.context.on('connect', () => this.updateConnection("Connected", true));
     this.context.on('connect_timeout', () => this.updateConnection("Timed out", false));
     this.context.on('reconnect', () => this.updateConnection("Reconnected", true));
-    this.context.on('reconnecting', (attempt) => this.updateConnection("Reconnecting" + '.'.repeat(attempt), false));
+    this.context.on('reconnecting', (attempt) => this.updateConnection("Reconnecting" + '.'.repeat(attempt % 5), false));
     
     this.context.on('reconnect_failed', () => this.updateConnection("Unable to reconnect", false));
     this.context.on('disconnect', () => this.updateConnection("Disconnected", false));
@@ -27,6 +26,10 @@ class ConnectionStatus extends Component {
         console.error(error);
       }
     });
+
+    if (this.context.connected) {
+      this.updateConnection("Connected", true);
+    }
   }
 
   updateConnection(status, connected) {
@@ -36,7 +39,7 @@ class ConnectionStatus extends Component {
 
   render() {
     return (
-      <div className="header-connection d-flex align-items-center">
+      <div className="connection-indicator d-flex align-items-center">
         <span className="p-1 pr-2">{this.state.status}</span> <span className={"dot " + (this.state.connected ? "green" : "red")}></span>
       </div>
     );

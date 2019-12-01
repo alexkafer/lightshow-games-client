@@ -12,7 +12,7 @@ import openSocket from 'socket.io-client';
 
 import './App.scss'
 
-const socket = openSocket('http://localhost:2567');
+const socket = openSocket('https://:2568');
 
 class App extends React.Component {
   constructor({loadGame, updateQueue, startGame}) {
@@ -32,10 +32,13 @@ class App extends React.Component {
       console.log("Starting game!");
       startGame()
     });
+
+    this.Loading = this.Loading.bind(this);
   }
 
   Loading (props) {
     if (props.error) {
+      console.error(props.error);
       return <ApprovalButton title="Error!" description={"Unable to load " + this.props.currentGame + ". "} button="Retry" callback="props.retry"/>;
       } else if (props.pastDelay) {
       return <ApprovalButton title="Loading" description={"Loading" + this.props.currentGame + ". Please wait."}/>;

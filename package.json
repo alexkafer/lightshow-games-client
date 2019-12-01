@@ -3,15 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.1.1",
+    "http-proxy-middleware": "^0.20.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-loadable": "^5.5.0",
+    "react-numeric-input": "^2.2.3",
     "react-redux": "^7.1.3",
+    "react-responsive-pinch-zoom-pan": "^0.2.2",
     "react-scripts": "3.2.0",
     "react-swipe": "^6.0.4",
+    "react-touch": "^0.4.4",
     "redux": "^4.0.4",
     "socket.io-client": "^2.3.0",
     "swipe-js-iso": "^2.1.5",
@@ -19,6 +27,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -26,6 +36,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://alexkafer.github.io/lightshow-games-client/",
   "browserslist": {
     "production": [
       ">0.2%",
