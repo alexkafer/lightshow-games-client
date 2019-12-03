@@ -1,29 +1,29 @@
 {
   "files": {
-    "static/js/0.1696f28c.chunk.js": "/lightshow-games-client/static/js/0.1696f28c.chunk.js",
-    "static/js/0.1696f28c.chunk.js.map": "/lightshow-games-client/static/js/0.1696f28c.chunk.js.map",
-    "static/js/1.f533d232.chunk.js": "/lightshow-games-client/static/js/1.f533d232.chunk.js",
-    "static/js/1.f533d232.chunk.js.map": "/lightshow-games-client/static/js/1.f533d232.chunk.js.map",
-    "static/js/2.464a7eb8.chunk.js": "/lightshow-games-client/static/js/2.464a7eb8.chunk.js",
-    "static/js/2.464a7eb8.chunk.js.map": "/lightshow-games-client/static/js/2.464a7eb8.chunk.js.map",
-    "static/js/3.bc6e8840.chunk.js": "/lightshow-games-client/static/js/3.bc6e8840.chunk.js",
-    "static/js/3.bc6e8840.chunk.js.map": "/lightshow-games-client/static/js/3.bc6e8840.chunk.js.map",
-    "main.css": "/lightshow-games-client/static/css/main.7f8049a5.chunk.css",
-    "main.js": "/lightshow-games-client/static/js/main.5d48d01e.chunk.js",
-    "main.js.map": "/lightshow-games-client/static/js/main.5d48d01e.chunk.js.map",
-    "runtime-main.js": "/lightshow-games-client/static/js/runtime-main.0410e274.js",
-    "runtime-main.js.map": "/lightshow-games-client/static/js/runtime-main.0410e274.js.map",
-    "static/js/6.ba988608.chunk.js": "/lightshow-games-client/static/js/6.ba988608.chunk.js",
-    "static/js/6.ba988608.chunk.js.map": "/lightshow-games-client/static/js/6.ba988608.chunk.js.map",
-    "index.html": "/lightshow-games-client/index.html",
-    "precache-manifest.07778a265fc4c2280edba9714060e642.js": "/lightshow-games-client/precache-manifest.07778a265fc4c2280edba9714060e642.js",
-    "service-worker.js": "/lightshow-games-client/service-worker.js",
-    "static/css/main.7f8049a5.chunk.css.map": "/lightshow-games-client/static/css/main.7f8049a5.chunk.css.map"
+    "static/js/0.1696f28c.chunk.js": "/static/js/0.1696f28c.chunk.js",
+    "static/js/0.1696f28c.chunk.js.map": "/static/js/0.1696f28c.chunk.js.map",
+    "static/js/1.f533d232.chunk.js": "/static/js/1.f533d232.chunk.js",
+    "static/js/1.f533d232.chunk.js.map": "/static/js/1.f533d232.chunk.js.map",
+    "static/js/2.464a7eb8.chunk.js": "/static/js/2.464a7eb8.chunk.js",
+    "static/js/2.464a7eb8.chunk.js.map": "/static/js/2.464a7eb8.chunk.js.map",
+    "static/js/3.bc6e8840.chunk.js": "/static/js/3.bc6e8840.chunk.js",
+    "static/js/3.bc6e8840.chunk.js.map": "/static/js/3.bc6e8840.chunk.js.map",
+    "main.css": "/static/css/main.7f8049a5.chunk.css",
+    "main.js": "/static/js/main.9a6c2cb7.chunk.js",
+    "main.js.map": "/static/js/main.9a6c2cb7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.419f3b6b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.419f3b6b.js.map",
+    "static/js/6.42b18c1a.chunk.js": "/static/js/6.42b18c1a.chunk.js",
+    "static/js/6.42b18c1a.chunk.js.map": "/static/js/6.42b18c1a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b87f36f4dc55a561dcfd16a6fcc965ab.js": "/precache-manifest.b87f36f4dc55a561dcfd16a6fcc965ab.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.7f8049a5.chunk.css.map": "/static/css/main.7f8049a5.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0410e274.js",
-    "static/js/6.ba988608.chunk.js",
+    "static/js/runtime-main.419f3b6b.js",
+    "static/js/6.42b18c1a.chunk.js",
     "static/css/main.7f8049a5.chunk.css",
-    "static/js/main.5d48d01e.chunk.js"
+    "static/js/main.9a6c2cb7.chunk.js"
   ]
 }
