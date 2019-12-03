@@ -6,24 +6,24 @@
     "static/js/1.f533d232.chunk.js.map": "/lightshow-games-client/static/js/1.f533d232.chunk.js.map",
     "static/js/2.464a7eb8.chunk.js": "/lightshow-games-client/static/js/2.464a7eb8.chunk.js",
     "static/js/2.464a7eb8.chunk.js.map": "/lightshow-games-client/static/js/2.464a7eb8.chunk.js.map",
-    "static/js/3.1bf3684a.chunk.js": "/lightshow-games-client/static/js/3.1bf3684a.chunk.js",
-    "static/js/3.1bf3684a.chunk.js.map": "/lightshow-games-client/static/js/3.1bf3684a.chunk.js.map",
+    "static/js/3.6e9704e9.chunk.js": "/lightshow-games-client/static/js/3.6e9704e9.chunk.js",
+    "static/js/3.6e9704e9.chunk.js.map": "/lightshow-games-client/static/js/3.6e9704e9.chunk.js.map",
     "main.css": "/lightshow-games-client/static/css/main.7f8049a5.chunk.css",
-    "main.js": "/lightshow-games-client/static/js/main.d052a988.chunk.js",
-    "main.js.map": "/lightshow-games-client/static/js/main.d052a988.chunk.js.map",
-    "runtime-main.js": "/lightshow-games-client/static/js/runtime-main.e5e832eb.js",
-    "runtime-main.js.map": "/lightshow-games-client/static/js/runtime-main.e5e832eb.js.map",
+    "main.js": "/lightshow-games-client/static/js/main.5d48d01e.chunk.js",
+    "main.js.map": "/lightshow-games-client/static/js/main.5d48d01e.chunk.js.map",
+    "runtime-main.js": "/lightshow-games-client/static/js/runtime-main.56a475bf.js",
+    "runtime-main.js.map": "/lightshow-games-client/static/js/runtime-main.56a475bf.js.map",
     "static/js/6.ba988608.chunk.js": "/lightshow-games-client/static/js/6.ba988608.chunk.js",
     "static/js/6.ba988608.chunk.js.map": "/lightshow-games-client/static/js/6.ba988608.chunk.js.map",
     "index.html": "/lightshow-games-client/index.html",
-    "precache-manifest.a57a3c22098f2adb1dab369e0bea8a08.js": "/lightshow-games-client/precache-manifest.a57a3c22098f2adb1dab369e0bea8a08.js",
+    "precache-manifest.40dc0c6dce203a153d7822bcbf15edbd.js": "/lightshow-games-client/precache-manifest.40dc0c6dce203a153d7822bcbf15edbd.js",
     "service-worker.js": "/lightshow-games-client/service-worker.js",
     "static/css/main.7f8049a5.chunk.css.map": "/lightshow-games-client/static/css/main.7f8049a5.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5e832eb.js",
+    "static/js/runtime-main.56a475bf.js",
     "static/js/6.ba988608.chunk.js",
     "static/css/main.7f8049a5.chunk.css",
-    "static/js/main.d052a988.chunk.js"
+    "static/js/main.5d48d01e.chunk.js"
   ]
 }
