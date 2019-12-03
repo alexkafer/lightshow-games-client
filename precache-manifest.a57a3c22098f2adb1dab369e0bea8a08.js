@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c8aaa42481495a724adddef25f6bfe68",
+    "revision": "d099e61097d01e24590de4855f6f4b1e",
     "url": "/lightshow-games-client/index.html"
   },
   {
-    "revision": "c57951de6ecc681218d7",
+    "revision": "dac09da132f0acfaf833",
     "url": "/lightshow-games-client/static/css/main.7f8049a5.chunk.css"
   },
   {
@@ -20,19 +20,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lightshow-games-client/static/js/2.464a7eb8.chunk.js"
   },
   {
-    "revision": "a9198a34b925e78a3ab2",
-    "url": "/lightshow-games-client/static/js/3.94c6929d.chunk.js"
+    "revision": "1fc7223ee20e6810949b",
+    "url": "/lightshow-games-client/static/js/3.1bf3684a.chunk.js"
   },
   {
     "revision": "9bdc040f9cd16189ccc4",
     "url": "/lightshow-games-client/static/js/6.ba988608.chunk.js"
   },
   {
-    "revision": "c57951de6ecc681218d7",
-    "url": "/lightshow-games-client/static/js/main.feae684e.chunk.js"
+    "revision": "dac09da132f0acfaf833",
+    "url": "/lightshow-games-client/static/js/main.d052a988.chunk.js"
   },
   {
-    "revision": "968257aa15911ac9dd53",
-    "url": "/lightshow-games-client/static/js/runtime-main.18d99747.js"
+    "revision": "89165d0044680437949e",
+    "url": "/lightshow-games-client/static/js/runtime-main.e5e832eb.js"
   }
 ]);
