@@ -1,6 +1,9 @@
+export function supported() {
+    return window.DeviceMotionEvent !== undefined;
+}
 export function needsPermission() {
     // Checks to see if we need to request permission. AFAIK, This is only for iOS 13+
-    return (typeof DeviceMotionEvent.requestPermission === 'function');
+    return (typeof DeviceMotionEvent && typeof DeviceMotionEvent.requestPermission === 'function');
 }
 
 export function requestPermission() {

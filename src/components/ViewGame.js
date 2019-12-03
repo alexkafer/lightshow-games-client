@@ -33,7 +33,7 @@ class ViewGame extends React.Component {
             <div className="view-game">
                 <canvas ref="canvas" />
                 <div className="game-icon-position">
-                    <img className="game-icon rounded-circle" src={process.env.PUBLIC_URL + '/icons/' + game + '.svg'} alt={game + " icon"} />
+                    <img className="game-icon rounded-circle" src={process.env.PUBLIC_URL + '/icons/' + game.toLowerCase() + '.svg'} alt={game + " icon"} />
                 </div>
             </div>
         );

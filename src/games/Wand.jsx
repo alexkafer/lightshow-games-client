@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Navbar, Button } from 'react-bootstrap'
 import SocketContext from '../services/socket-context'
-import {needsPermission, requestPermission, registerOrientationListener, removeOrientationListener} from '../services/deviceOrientation'
+import {supported, needsPermission, requestPermission, registerOrientationListener, removeOrientationListener} from '../services/deviceOrientation'
 
 import MotionPage from '../settings/MotionPage'
 import LocationPage from '../settings/LocationPage'
@@ -108,22 +108,26 @@ class Wand extends Component {
     
 
     componentDidMount () {
-        const needsMotionPermission = needsPermission();
-        this.setState({needsMotion: needsMotionPermission})
-        
-        if (!needsMotionPermission) {
-            registerOrientationListener(this.handleOrientationEvent, this.compassNeedsCalibration);
+        if (supported()) {
+            const needsMotionPermission = needsPermission();
+            this.setState({needsMotion: needsMotionPermission})
+            
+            if (!needsMotionPermission) {
+                registerOrientationListener(this.handleOrientationEvent, this.compassNeedsCalibration);
 
-            // Set a timer, if we don't hear anything (canceling the timeout), assume it isn't supported
-            // this.setState({
-            //     motionTimeout: setTimeout(() => {
-            //         this.setState({notSupported: true});
-            //     }, 1000)
-            // });
+                // Set a timer, if we don't hear anything (canceling the timeout), assume it isn't supported
+                this.setState({
+                    motionTimeout: setTimeout(() => {
+                        this.setState({notSupported: true});
+                    }, 1000)
+                });
+            }
+
+            // Could use device motion for dead recking
+            // window.addEventListener("devicemotion", this.handleMotionEvent, true);
+        } else {
+            this.setState({notSupported: true});
         }
-
-        // Could use device motion for dead recking
-        // window.addEventListener("devicemotion", this.handleMotionEvent, true);
     }
 
     componentWillUnmount () {

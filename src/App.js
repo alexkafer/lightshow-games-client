@@ -12,7 +12,7 @@ import openSocket from 'socket.io-client';
 
 import './App.scss'
 
-const socket = openSocket('https://lightshow-games.azurewebsites.net');
+const socket = openSocket('https://lightshow.centralus.cloudapp.azure.com/');
 
 class App extends React.Component {
   constructor({loadGame, updateQueue, startGame}) {
