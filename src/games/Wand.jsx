@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Navbar, Button } from 'react-bootstrap'
+import { Container, Navbar, Button, Row, Col } from 'react-bootstrap'
 import SocketContext from '../services/socket-context'
 import {supported, needsPermission, requestPermission, registerOrientationListener, removeOrientationListener} from '../services/deviceOrientation'
 
@@ -33,6 +33,11 @@ class Wand extends Component {
         this.setPosition = this.setPosition.bind(this);
         this.exitGame = this.exitGame.bind(this);
         this.recordCalibration = this.recordCalibration.bind(this);
+    }
+
+    setNotSupported() {
+        this.setState({notSupported: true})
+        this.context.emit('end');
     }
 
     compassNeedsCalibration(event) {
@@ -85,7 +90,7 @@ class Wand extends Component {
                 registerOrientationListener(this.handleOrientationEvent, this.compassNeedsCalibration);
                 this.setState({needsMotion: false})
             } else if (response === 'denied') {
-                this.setState({notSupported: true})
+                this.setNotSupported();
             }
         }).catch(console.error)
     }
@@ -118,7 +123,7 @@ class Wand extends Component {
                 // Set a timer, if we don't hear anything (canceling the timeout), assume it isn't supported
                 this.setState({
                     motionTimeout: setTimeout(() => {
-                        this.setState({notSupported: true});
+                        this.setNotSupported();
                     }, 1000)
                 });
             }
@@ -126,7 +131,7 @@ class Wand extends Component {
             // Could use device motion for dead recking
             // window.addEventListener("devicemotion", this.handleMotionEvent, true);
         } else {
-            this.setState({notSupported: true});
+            this.setNotSupported();
         }
     }
 
@@ -137,10 +142,17 @@ class Wand extends Component {
 
     render() {
 
-        let userFocus = (<div className="wand">
-                <p>Now playing.</p>
-                <Button onClick={() => this.setState({needsCalibration: true})}>Calibrate</Button>
-            </div>);
+        let userFocus = (<Container>
+            <Row>
+                <Col><Button onClick={() => this.setState({needsPosition: true})}>Update Location</Button></Col>
+                <Col><Button onClick={() => this.setState({needsCalibration: true})}>Calibrate</Button></Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h1 className='mt-5'>Now Playing</h1>
+                </Col>
+            </Row>
+            </Container>);
 
         if (this.state.notSupported) {
             userFocus = <NoDeviceOrientationPage />

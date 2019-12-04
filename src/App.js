@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from "react-redux";
 import { getGame } from "./redux/selectors";
-import { updateQueue, loadGame, startGame } from "./redux/actions";
+import { updateQueue, loadGame, startGame, endGame } from "./redux/actions";
 
 import Dashboard from './components/Dashboard';
 import Loadable from 'react-loadable';
@@ -12,10 +12,10 @@ import openSocket from 'socket.io-client';
 
 import './App.scss'
 
-const socket = openSocket('https://lightshow.centralus.cloudapp.azure.com/');
-
+// const socket = openSocket('https://lightshow.centralus.cloudapp.azure.com/');
+const socket = openSocket('https://:8080');
 class App extends React.Component {
-  constructor({loadGame, updateQueue, startGame}) {
+  constructor({loadGame, updateQueue, startGame, endGame}) {
     super();
 
     socket.on('game', (game) => {
@@ -31,6 +31,11 @@ class App extends React.Component {
     socket.on('started', () => {
       console.log("Starting game!");
       startGame()
+    });
+
+    socket.on('ended', () => {
+      console.log("Ended game!");
+      endGame()
     });
 
     this.Loading = this.Loading.bind(this);
@@ -80,6 +85,7 @@ const mapDispatchToProps = dispatch => {
     loadGame: (game) => dispatch(loadGame(game)),
     updateQueue: (place) => dispatch(updateQueue(place)),
     startGame: () => dispatch(startGame()),
+    endGame: () => dispatch(endGame()),
   }
 }
 
