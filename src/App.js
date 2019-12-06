@@ -12,8 +12,8 @@ import openSocket from 'socket.io-client';
 
 import './App.scss'
 
-// const socket = openSocket('https://lightshow.centralus.cloudapp.azure.com/');
-const socket = openSocket('https://:8080');
+const socket = openSocket('https://lightshow.centralus.cloudapp.azure.com/');
+// const socket = openSocket('https://:8080');
 class App extends React.Component {
   constructor({loadGame, updateQueue, startGame, endGame}) {
     super();
