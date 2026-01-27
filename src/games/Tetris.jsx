@@ -11,7 +11,8 @@ class Tetris extends React.Component {
         
         this.sendUp = this.sendUp.bind(this);
         this.sendDown = this.sendDown.bind(this);
-        this.sendRotate = this.sendRotate.bind(this);
+        this.sendLeft = this.sendLeft.bind(this);
+        this.sendRight = this.sendRight.bind(this);
     }
 
     componentDidMount() {}
@@ -24,15 +25,19 @@ class Tetris extends React.Component {
         this.context.emit('down');
     }
 
-    sendRotate() {
-        this.context.emit('rotate');
+    sendLeft() {
+        this.context.emit('left');
+    }
+
+    sendRight() {
+        this.context.emit('right');
     }
 
     render() {
         return (
             <>
                 <Navbar bg="dark" expand="lg" variant="dark">
-                        <Navbar.Brand>Pong</Navbar.Brand>
+                        <Navbar.Brand>Tetris</Navbar.Brand>
                         <ConnectionStatus />
                     </Navbar>
                 <Container>
@@ -44,12 +49,17 @@ class Tetris extends React.Component {
                     </Row>
                     <Row>
                         <Col>
-                            <Button className="p-5 mt-2" onClick={this.sendDown}size="lg" block> DOWN </Button>
+                            <Button className="p-5 mb-2" onClick={this.sendLeft} size="lg"block> Left </Button>
+                            
+                        </Col>
+                        <Col>
+                            <Button className="p-5 mb-2" onClick={this.sendRight} size="lg"block> Right </Button>
+                            
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                            <Button className="p-5 mt-2" onClick={this.sendRotate}size="lg" block> Rotate </Button>
+                            <Button className="p-5 mt-2" onClick={this.sendDown}size="lg" block> DOWN </Button>
                         </Col>
                     </Row>
                 </Container>
@@ -58,6 +68,6 @@ class Tetris extends React.Component {
     } 
 } 
 
-Pong.contextType = SocketContext;
+Tetris.contextType = SocketContext;
 
-export default Pong;
+export default Tetris;
